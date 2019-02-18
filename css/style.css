@@ -1,0 +1,910 @@
+/**
+Theme Name:Alen personal portfoio Template
+Author:Themarlab
+Version:1.1;
+
+*/
+/**
+* Table of Contents
+ * 1.0 - Fonts
+ * 2.0 - Reset css
+ * 3.0 - Genarel css
+ * 4.0 - navbar
+ * 5.0 - banner
+ * 6.0 - About
+ * 7.0 - Skills
+ * 8.0 - Portfolio
+ * 9.0 - Contact
+ * 10.0 - Footer
+ * 11.0 - Responsive
+
+/* ==========================================================================
+   1.0 Fonts
+   ========================================================================== */ 
+/*Montserrat font*/
+@font-face {
+  font-family: 'montserrat';
+  src: url("../fonts/montserrat/montserrat-bold-webfont.eot");
+  src: url("../fonts/montserrat/montserrat-bold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/montserrat/montserrat-bold-webfont.woff2") format("woff2"), url("../fonts/montserrat/montserrat-bold-webfont.woff") format("woff"), url("../fonts/montserrat/montserrat-bold-webfont.ttf") format("truetype");
+  font-weight: 700; }
+
+@font-face {
+  font-family: 'montserrat';
+  src: url("../fonts/montserrat/montserrat-regular-webfont.eot");
+  src: url("../fonts/montserrat/montserrat-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/montserrat/montserrat-regular-webfont.woff2") format("woff2"), url("../fonts/montserrat/montserrat-regular-webfont.woff") format("woff"), url("../fonts/montserrat/montserrat-regular-webfont.ttf") format("truetype");
+  font-weight: 400; }
+@font-face {
+  font-family: 'montserrat';
+  src: url("../fonts/montserrat/montserrat-semibold-webfont.eot");
+  src: url("../fonts/montserrat/montserrat-semibold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/montserrat/montserrat-semibold-webfont.woff2") format("woff2"), url("../fonts/montserrat/montserrat-semibold-webfont.woff") format("woff"), url("../fonts/montserrat/montserrat-semibold-webfont.ttf") format("truetype");
+  font-weight: 600; }
+@font-face {
+  font-family: 'montserrat';
+  src: url("../fonts/montserrat/montserrat-light-webfont.eot");
+  src: url("../fonts/montserrat/montserrat-light-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/montserrat/montserrat-light-webfont.woff2") format("woff2"), url("../fonts/montserrat/montserrat-light-webfont.woff") format("woff"), url("../fonts/montserrat/montserrat-light-webfont.ttf") format("truetype");
+  font-weight: 300; }
+
+/*open sans font*/
+@font-face {
+	font-family: 'open_sans';
+	src:url('../fonts/open-sans/opensans-regular-webfont.eot');
+	src:url('../fonts/open-sans/opensans-regular-webfont.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/open-sans/opensans-regular-webfont.woff2') format('woff2'),
+		url('../fonts/open-sans/opensans-regular-webfont.woff') format('woff'),
+		url('../fonts/open-sans/opensans-regular-webfont.ttf') format('truetype');
+	font-weight: 400;
+
+}
+@font-face {
+	font-family: 'open_sans';
+	src:url('../fonts/open-sans/opensans-bold-webfont.eot');
+	src:url('../fonts/open-sans/opensans-bold-webfont.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/open-sans/opensans-bold-webfont.woff2') format('woff2'),
+		url('../fonts/open-sans/opensans-bold-webfont.woff') format('woff'),
+		url('../fonts/open-sans/opensans-bold-webfont.ttf') format('truetype');
+	font-weight: 600;
+
+}
+
+
+/* ==========================================================================
+   2.0 Reset css
+   ========================================================================== */
+html, body { 
+	overflow-x: hidden;
+	font-size: 14px;
+	color: #7d7d7d;
+	font-family:'montserrat';
+	font-weight: 300;
+	line-height: 26px;
+	height: 100%;
+	background: #fff;
+}
+h1,h2,h3,h4,h5,h6{
+	font-family: 'montserrat';
+	font-weight: 600;
+	margin: 0px;
+}
+ul{
+	padding: 0px;
+}
+li{
+	list-style: none;
+}
+
+a{
+	text-decoration: none;
+	outline: 0;
+}
+a:active,
+a:focus { 
+	outline: 0;
+    -moz-outline:0;
+    text-decoration: none; 
+}
+a:hover{
+	text-decoration: none;
+}
+.nav > li > a:focus, .nav > li > a:hover{
+	background: transparent;
+}
+.sec-pad{
+	padding:70px 0px;
+}
+img{
+	max-width:100%; 
+	height: auto;
+}
+#preloader {
+	position:fixed;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	background-color:#333;
+	z-index:10000;
+}
+
+#status {
+	width:200px;
+	height:200px;
+	position:absolute;
+	left:50%;
+	top:50%;
+	background-image:url(../image/loading.gif);
+	background-repeat:no-repeat;
+	background-position:center;
+	margin:-100px 0 0 -100px;
+}
+.alter-bg{
+	background: #f5f5f5;
+}
+.nplr{
+	padding: 0px;	
+}
+.npl{
+	padding-left:0px;	
+}
+.npr{
+	padding-right:0px;	
+}
+/* ==========================================================================
+   3.0 genarel Styling
+   ========================================================================== */
+.carousel .item  .banner-img{
+	height:100%;
+	background-repeat: no-repeat !important;
+	background-position:top center !important;
+	background-size:cover !important; 
+	transform: scaleX(-1);	
+}
+.carousel,.item,.active{
+	height:100%;
+}
+.carousel-inner{
+	height:100%;
+}
+.carousel-fade .carousel-inner .item {
+  opacity: 0;
+  transition-property: opacity;
+}    
+.carousel-fade .carousel-inner .active {
+  opacity: 1;
+}    
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right {
+  left: 0;
+  opacity: 0;
+  z-index: 1;
+}    
+.carousel-fade .carousel-inner .next.left,
+.carousel-fade .carousel-inner .prev.right {
+  opacity: 1;
+}    
+.carousel-fade .carousel-control {
+  z-index: 2;
+}
+@media all and (transform-3d), (-webkit-transform-3d) {
+    .carousel-fade .carousel-inner > .item.next,
+    .carousel-fade .carousel-inner > .item.active.right {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 0, 0);
+              transform: translate3d(0, 0, 0);
+    }
+    .carousel-fade .carousel-inner > .item.prev,
+    .carousel-fade .carousel-inner > .item.active.left {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 0, 0);
+              transform: translate3d(0, 0, 0);
+    }
+    .carousel-fade .carousel-inner > .item.next.left,
+    .carousel-fade .carousel-inner > .item.prev.right,
+    .carousel-fade .carousel-inner > .item.active {
+      opacity: 1;
+      -webkit-transform: translate3d(0, 0, 0);
+              transform: translate3d(0, 0, 0);
+    }
+}
+.typed-cursor {
+    font-weight: 300;
+}
+.scroll-downs {
+  position: absolute;
+  right: 0;
+  left: 0;
+  margin: auto;
+  z-index: 10;
+  width :34px;
+  height: 55px;
+  bottom: 30px;
+}
+.scroller {
+	display: block;
+	height: 100px;
+	width: 100px;
+	color: #fff;
+	font-size:30px; 
+  animation-name: scroll;
+  animation-duration: 2.2s;
+  animation-timing-function: cubic-bezier(.15,.41,.69,.94);
+  animation-iteration-count: infinite;
+}
+@keyframes scroll {
+  0% { opacity: 0; }
+  10% { transform: translateY(0); opacity: 1; }
+  100% { transform: translateY(15px); opacity: 0;}
+}
+.scroller:hover, .scroller:active ,.scroller:focus{
+	color: #fff;
+}
+.overly:after{
+	content: '';
+	position: absolute;
+	display: block;
+	height: 100%;
+	top: 0;
+	left: 0;
+	right: 0;
+	background:rgba(0, 0, 0, 0.5);
+}
+.link-wrapper{
+	position: relative;
+	display: block;
+	overflow: hidden;
+	color: #fff;
+
+}
+.border{
+	position: relative;
+}
+.border:after{
+	position: absolute;
+	z-index: -1;
+	top: 10%;
+	left: 15%;
+	content: '';
+    display:block;
+    width: 100%;
+    height: 100%;
+    border: 5px solid #ffc815;
+}
+
+.video-background {
+  background: #000;  
+  top: 0; 
+  right: 0; 
+  bottom: 0; 
+  left: 0;
+  overflow: hidden;
+  z-index: -99;
+}
+.video-foreground,
+.video-background iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+}
+@media (min-aspect-ratio: 16/9) {
+  .video-foreground { height: 300%; top: -100%; }
+}
+@media (max-aspect-ratio: 16/9) {
+  .video-foreground { width: 300%; left: -100%; }
+}
+section .section-text{
+	margin-bottom: 40px;
+}
+section .section-heading{
+	position: relative;
+	font-size: 36px;
+	font-weight: 700;
+	line-height: 30px;
+	color: #333;
+	text-transform: capitalize;
+	padding-bottom: 15px;
+	letter-spacing: 1px;
+}
+.btn{
+	display: inline-block;
+	text-align: center;
+	border-radius: 5px;
+	width: 150px;
+	line-height: 30px;
+	font-size: 10px;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	background: transparent;
+	font-family: 'montserrat';
+	font-weight: 600;
+	transition: 0.5s;
+	margin-right: 10px;
+	margin-top: 40px;
+}
+.btn-primary, .btn-primary.active{
+	color: #fff;
+	background: #ffc815;
+	border: 0px;
+}
+.btn-primary:hover, .btn-primary:active, .btn-primary:focus{
+	color: #fff;
+	background: #000;
+	border-color: #000;
+}   		
+.content-col-holder .col-icon i {
+    font-size: 40px;
+    -webkit-transition: .3s;
+    transition: .3s;
+    text-align: center;
+    color: #232323;
+    line-height: 80px;
+}
+
+.content-col-holder .col-text h4{
+	color: #232323;
+	font-size: 11px;
+	font-weight: 600;
+	margin: 0px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+} 
+.content-col-holder .col-text p{
+	padding-top:16px; 
+}
+
+.timeline-row{
+	margin-bottom: 35px;
+}
+.timeline-row:last-child{
+	margin-bottom: 0px;
+}
+.timeline-left{
+	text-align: right;
+}
+.timeline-right{
+	position: relative;
+	padding-left: 50px;
+}
+.timeline-right:before {
+    background-color: #ffd504;
+    opacity: .5;
+    content: '';
+    height: calc(100% + 54px);
+    width: 1px;
+    position: absolute;
+    left:0;
+    top: 16px;
+}
+.timeline-right.last-timeline:before{
+	height:100%;
+}
+.timeline h3{
+	color:#333;
+	margin-bottom: 10px;
+	font-size: 18px;
+}
+.timeline-right h3:before {
+    width: 16px;
+    height: 16px;
+    border-radius: 100%;
+    position: absolute;
+    border: 0;
+    background-color: #ffd504;
+    left:-7px;
+    content: '';
+}
+.box-wrapper .box-col{
+	transition:0.5s;
+	
+}
+.box-wrapper .box-col:hover{
+	background: #ffc815;
+}
+/* ==========================================================================
+    4.0 Navbar Styling
+   ========================================================================== */
+.navbar-custom {
+	background-color: transparent;
+	border:none;
+	padding: 15px 0px;
+	-webkit-transition: padding .5s;
+	-moz-transition: padding .5s;
+	transition: padding .5s;
+} 
+.navbar-custom .navbar-brand {
+	padding: 0px;
+}   
+.navbar-custom .navbar-toggle {
+	border: none;
+	border-radius: 0px;
+	text-transform: uppercase;
+	color: white;
+	font-size: 20px;
+	margin-right: 0px;
+}
+.navbar-custom ul li{
+	margin: 0 15px;
+}
+.navbar-custom ul li:last-chlid{
+	margin-right:0px; 
+}
+.navbar-custom ul li a{
+	color: #fff;
+	font-size: 10px;
+	font-family: 'montserrat';
+	font-weight: 400;
+	text-transform: uppercase;
+	padding: 15px 0;
+}
+.navbar-custom ul li a:hover{
+	background:transparent;
+	color: #ffc815; 
+}
+.navbar-nav li a.active{
+	color: #ffc815;
+}
+
+.navbar-custom.affix{
+	background: #000;
+	padding: 10px 0px;
+}
+
+/* ==========================================================================
+   5.0 Banner Styling
+   ========================================================================== */
+.banner-content{
+	position: relative;
+	height: 100%;
+	overflow: hidden;
+	background-color: #f2f2f2;
+}
+
+.banner-content .intro-text{
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 50%;
+  	transform: translateY(-50%);
+	color: #fff;
+	z-index: 100;
+}
+.banner-content .intro-text .top-text{
+	font-size: 20px;
+	letter-spacing: 10px;
+	font-family: 'montserrat';
+	font-weight: 400;
+	margin-bottom: 40px;
+	color: #ffc815;
+
+}
+
+.banner-content .intro-text .effect-text{
+	font-size: 60px;
+	font-weight: 700;
+	font-family: 'montserrat';
+
+}
+/* ==========================================================================
+   6.0 About Styling
+   ========================================================================== */
+.about .sec-pad{
+	padding-bottom: 50px;
+}   
+.about .abt-text{
+	padding-top: 100px;
+}
+.about .about-spec .col-icon{
+	font-size: 36px;
+}
+.about .about-spec .col-text h4{
+	color: #777;
+}
+/* ==========================================================================
+    7.0 Skills Styling
+   ========================================================================== */
+	.skillsList{
+		text-align: center;
+	}
+	
+	.skillsTitle{
+		text-align: center;
+		margin: 4rem;
+	}
+	
+	.skillsListContainer .skillsTitle:first-child{
+		margin-top: 0;
+	}
+	.skillsIcon{
+		font-size: 5rem;
+	}
+	.skills-icon-description{
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+/* ==========================================================================
+   8.0 	Portfolio Styling
+   ========================================================================== */
+.portfolio .portfolio-wrapper{
+	position: relative;
+	display: flex;
+	justify-content: center;
+}
+.portfolio .filters-menu{
+	margin-bottom: 40px;
+	text-align: center;;
+}
+.portfolio .filters-menu li{
+	display: inline-block;
+	cursor: pointer;
+}
+.portfolio .filters-menu li{
+	font-size: 13px;
+	position: relative;
+	color: #b7b7b7;
+	font-weight: 400;
+	padding:0 7px;
+	margin-right: auto;
+	margin-left: auto;
+}
+.portfolio .filters-menu li.active{
+	color: #000;
+}
+.portfolio .filters-menu li:hover{
+	color: #000;
+}
+
+.portfolio-single-item{
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+.portfolio .portfolio-wrapper .portfolio-item{
+	float: left;
+	/* original 30% */
+	width:100%;
+}
+
+.portfolio .portfolio-wrapper .portfolio-item img{
+	width: 100%;
+	transition: all 1s;
+}
+.portfolio .portfolio-wrapper .portfolio-item .portfolio-hover:hover img{
+	opacity: 0.5;
+	-webkit-transform: scale(1.3);
+	transform: scale(1.3);
+
+}
+
+.portfolio .portfolio-wrapper .portfolio-item .portfolio-hover{
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+.portfolio .portfolio-wrapper .portfolio-item .portfolio-hover:hover .portfolio-hover-content .text{
+	opacity: 1;
+	transition: all ease .5s;
+	-webkit-transition: all ease 1s;
+	-moz-transition: all ease 1s; 
+}
+
+.portfolio .portfolio-wrapper .portfolio-item .portfolio-hover .portfolio-hover-content{
+	position: relative;
+	background: #000;
+	color: #fff;
+	text-align: center;
+	font-weight: 600;
+	top:0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	transition: all ease .5s;
+	-webkit-transition: all ease 1s;
+	-moz-transition: all ease 1s; 
+
+}
+.portfolio .portfolio-wrapper .portfolio-item .portfolio-hover .portfolio-hover-content .text{
+	position: absolute;
+	left: 0;
+	right: 0;
+	top:50%;
+	transform: translateY(-50%);
+	opacity: 0;
+}
+.portfolio .portfolio-wrapper .portfolio-item .portfolio-hover .portfolio-hover-content h4{
+	font-size: 22px;
+	color:#ffc815;
+}
+.portfolio .portfolio-wrapper .portfolio-item .portfolio-hover .portfolio-hover-content p{
+	color: #fff;
+	text-transform:uppercase;
+	font-size: 10px;
+	letter-spacing: 2px;
+	font-weight: 300;
+}
+
+#Container .mix{
+	display: none;
+} 
+
+/* ==========================================================================
+   9.0 Contact Styling
+   ========================================================================== */
+.contact .custom-form{
+	padding: 25px;
+	box-shadow: 0 0 40px rgba(0, 0, 0, 0.08);
+	-webkit-box-shadow: 0 0 40px rgba(0, 0, 0, 0.08);
+	-moz-box-shadow: 0 0 40px rgba(0, 0, 0, 0.08);
+	background: #fff;
+}
+.contact .custom-form .btn{
+	font-size: 16px;
+	width: 140px;
+	line-height:40px;
+	border-radius:50px;
+	background: transparent;
+	border:2px solid #ffc815; 
+	color: #ffc815;
+	transition:0.3s; 
+}
+.contact .custom-form .btn:hover{
+	background: #ffc815;
+	color: #fff;
+}
+.contact .custom-form .form-group{
+	margin-bottom: 40px;
+}
+.contact .custom-form span{
+	font-size: 18px;
+	color: #898989;
+}
+.contact .custom-form .form-control{
+	border-radius: 0px;
+	border:none;
+	border-bottom: 1px solid #ebebeb;
+	margin-top: 10px;
+	background: transparent;
+	height: 40px;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.0);
+
+}
+.contact .custom-form .form-control:focus{
+	border-bottom: 1px solid #000;
+} 
+.contact .custom-form textarea.form-control{
+	height: 100px;
+}
+.contact .custom-form .has-error .form-control{
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,0);
+
+}
+.contact .custom-form .has-error .form-control{
+    border-bottom: 1px solid #e74c3c;
+}
+.contact .contact-holder h3{
+	margin-bottom: 25px;
+
+}
+.contact .contact-holder .contact-details{
+	margin-top: 30px;
+}
+.contact .contact-holder .contact-details li{
+	margin-top: 20px;
+}
+.contact .contact-holder .contact-details li:first-child{
+	margin-top: 0px;
+}
+.contact .contact-holder .contact-details li i{
+	float: left;
+	font-size: 20px;
+	border-radius: 50px;
+	background: #000;
+	text-align: center;
+	width: 50px;
+	height: 50px;
+	text-align: center;
+	line-height: 48px;
+	color: #fff;  
+}
+.contact .contact-holder .contact-details li span{
+	display: block;
+	margin-left: 60px;
+	margin-top: 10px; 
+}
+.contact .contact-holder .contact-details li span{
+	font-size: 16px;
+	color: #333;
+}
+
+/* ==========================================================================
+   10.0 Footer Styling
+   ========================================================================== */
+	.footer-wrapper {
+		background: #000;
+		padding: 10px 0px;
+	}
+
+	.footer-wrapper .social-holder {
+		text-align: center;
+	}
+
+	.social-holder a {
+		margin-right: 15px;
+	}
+
+	.social-holder a:last-child {
+		margin-right: 0px;
+	}
+
+	.social-holder i {
+		margin-top: 40px;
+		text-align: center;
+		color: white;
+		font-size: 20px;
+		border-radius: 50%;
+		background: rgba(0, 0, 0, 0.3);
+		width: 38px;
+		height: 38px;
+		line-height: 38px;
+	}
+
+	.social-holder i:hover {
+		color: #ffc815;
+		transition: .3s;
+	}
+
+	.footer-wrapper .copyright {
+		font-size: 13px;
+		color: #fff;
+		text-align: center;
+		margin-top: 20px;
+	}
+
+/* ==========================================================================
+   11.0 Responsive CSS
+   ========================================================================== */
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+	body{
+		font-size: 13px;
+	}
+	.container {
+	    padding: 0 30px;
+	}
+
+	.res-margin{
+		margin-bottom: 50px;
+	}
+	.sec-pad {
+	    padding: 70px 0px;
+	}
+	.timeline-left{
+		text-align: left;
+	}
+	.timeline-right::before {
+		left: 18px;
+	}
+	.timeline-right h3::before {
+		left:10px;
+	}
+	.border::after {
+	    z-index: 1;
+	    top: 5%;
+	    left: 5%;
+	    width: 90%;
+	    height: 90%;
+	}
+
+	.navbar-custom ul li {
+	    margin: 0 10px;
+	}
+	.banner-content .intro-text .effect-text {
+	    font-size: 30px;
+	}
+	.banner-content .intro-text .top-text {
+	    font-size: 12px;
+	    margin-bottom: 10px;
+	}
+
+	.banner-content .intro-text .intro-heading{
+		font-size: 36px;
+	}
+	.about .abt-text {
+		padding-top: 10px;
+	}
+	.about .abt-text h2{
+		font-size: 40px;
+	}
+	.portfolio .portfolio-wrapper .portfolio-item {
+		/* original 50% */
+		width: 100%;
+	}
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 767px) {
+	.container {
+	    padding-left: 30px;
+	    padding-right: 30px;
+	    max-width: 100%;
+	}
+	.res-margin{
+		margin-bottom: 35px;
+	}
+	.sec-pad{
+		padding: 50px 0;
+	}
+	.navbar-custom, .navbar-custom.affix{
+		padding: 0px;
+		background:#000;
+	}
+	.navbar-custom .navbar-brand {
+	    padding: 8px 0 0 0;
+	}
+	.navbar-custom ul li {
+		margin: 0 10px;
+	}
+	.navbar-custom .navbar-nav  li  a{
+		font-weight: 700;
+		text-align: center;
+	}
+	.navbar-custom ul li:last-child a{
+		padding: 0 20px 0 20px;
+		line-height: 32px;
+	}
+	.navbar-nav li a.active, .navbar-custom ul li a:hover {
+		border-bottom: 0px;
+	}
+
+	.banner-content .intro-text .intro-heading{
+		font-size: 40px;
+	}
+	.banner-content .intro-text .button a {
+		padding: 0;
+		margin-top: 25px;
+	}
+	.intro-text{
+		text-align:center; 	
+	}
+	.timeline-right{
+		padding-left:15px;
+	}
+	.timeline-right:before {
+	    display: none;
+	}
+	.timeline-right h3:before {
+	    display: none;
+	}
+
+}
+
+/* Extra Small Devices, Phones */ 
+@media only screen and (max-width : 480px) {
+	.container{
+		padding-left: 35px;
+		padding-right: 35px;
+	}
+	.banner-content .intro-text .effect-text {
+	    font-size: 20px;
+	}
+	.banner-content .intro-text .top-text {
+	    font-size: 9px;
+	    margin-bottom: 5px;
+	}
+
+	.btn{
+		margin-top: 15px;
+	}
+}
+
+/* Custom, iPhone Retina */ 
+@media only screen and (max-width : 360px) {
+	.portfolio .portfolio-wrapper .portfolio-item {
+		width: 100%;
+	}
+}
