@@ -647,7 +647,9 @@ section .section-heading{
 	background: transparent;
 	border:2px solid #ffc815; 
 	color: #ffc815;
-	transition:0.3s; 
+	transition:0.3s;
+	outline: none;
+	
 }
 .contact .custom-form .btn:hover{
 	background: #ffc815;
@@ -697,26 +699,55 @@ section .section-heading{
 .contact .contact-holder .contact-details li:first-child{
 	margin-top: 0px;
 }
-.contact .contact-holder .contact-details li i{
-	float: left;
-	font-size: 20px;
-	border-radius: 50px;
-	background: #000;
-	text-align: center;
+
+.contact-info {
+	background:#fff; 
+	position: relative;
+	padding: 10px 10px 40px 90px;
+	margin-bottom: 30px;
+	box-shadow: rgba(58,78,95,0.2) 0 10px 16px, rgba(58,78,95,0.05) 0 -5px 16px;
+	border-radius: 10px;
+}
+.contact-info i{
+	font-size: 16px;
 	width: 50px;
 	height: 50px;
 	text-align: center;
-	line-height: 48px;
-	color: #fff;  
+	line-height: 50px;
+	position: absolute;
+	left: 20px;
+	top: 28px;
+	background: rgba(0, 0, 0, 0.8);
+	border-radius: 50%;
+	color: #fff;
 }
-.contact .contact-holder .contact-details li span{
-	display: block;
-	margin-left: 60px;
-	margin-top: 10px; 
+
+.contact-info .fa-map-marker{
+	font-size: 20px;
 }
-.contact .contact-holder .contact-details li span{
-	font-size: 16px;
-	color: #333;
+
+.contact-info .fa-linkedin{
+	font-size: 18px;
+}
+
+.contact-info .fa-github{
+	font-size: 25px;
+}
+
+.contact-info i:hover{
+	color: #ffc815;
+	transition: .3s;
+}
+
+.contact-info h4{
+	margin: 33px 0 10px;
+	font-weight: 600;
+	color: #898989;
+}
+
+.contact-info h4:hover{
+	color:#ffc815;
+	transition: .3s
 }
 
 /* ==========================================================================
