@@ -700,14 +700,14 @@ section .section-heading{
 	margin-top: 0px;
 }
 
-/* .contact-info {
+.contact-info {
 	background:#fff; 
 	position: relative;
 	padding: 10px 10px 40px 90px;
 	margin-bottom: 30px;
 	box-shadow: rgba(58,78,95,0.2) 0 10px 16px, rgba(58,78,95,0.05) 0 -5px 16px;
 	border-radius: 10px;
-} */
+}
 .contact-info i{
 	font-size: 16px;
 	width: 50px;
