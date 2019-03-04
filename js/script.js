@@ -75,39 +75,56 @@
        Menu click scroll 
     ========================================================================== */ 
 (function () {
-       $(document).on("scroll", onScroll);
+    $('a[href*="#"]:not([href="#"])').click(function(e) {
+        e.preventDefault()
+        var target = $(this.hash);
+          $('html,body').stop().animate({
+            scrollTop: target.offset().top - 70
+          }, 'linear');   
+    });    
+      if (location.hash){
+      var id = $(location.hash);
+      }
+      $(window).load(function() {
+        if (location.hash){
+          $('html,body').animate({scrollTop: id.offset().top -70}, 500, 'swing')
+        };
+       });
+
+       
+    //    $(document).on("scroll", onScroll);
  
-        $('.menu li a[href^="#"], .scroll-btn a[href^="#"]').on('click', function (e) {
-            e.preventDefault();
-            $(document).off("scroll");
+    //     $('.menu li a[href^="#"], .scroll-btn a[href^="#"]').on('click', function (e) {
+    //         e.preventDefault();
+    //         $(document).off("scroll");
  
-            $('a').each(function () {
-                $(this).removeClass('active');
-            })
-            $(this).addClass('active');
+    //         $('a').each(function () {
+    //             $(this).removeClass('active');
+    //         })
+    //         $(this).addClass('active');
  
-            var target = this.hash;
-            $target = $(target);
-            $('html, body').stop().animate({
-                'scrollTop': $target.offset().top+2
-            }, 500, 'swing', function () {
-                window.location.hash = target;
-                $(document).on("scroll", onScroll);
-            });
-        });
+    //         var target = this.hash;
+    //         $target = $(target);
+    //         $('html, body').stop().animate({
+    //             'scrollTop': $target.offset().top+2
+    //         }, 500, 'swing', function () {
+    //             window.location.hash = target;
+    //             $(document).on("scroll", onScroll);
+    //         });
+    //     });
  
-    function onScroll(event){
-        var scrollPosition = $(document).scrollTop();
-        $('.menu a').each(function () {
-            var currentLink = $(this);
-            var refElement = $(currentLink.attr("href"));
-            if (refElement.position().top <= scrollPosition && refElement.position().top + refElement.height() > scrollPosition) {
-                $('.menu li a').removeClass("active");
-                currentLink.addClass("active");
-            }
-            else{
-                currentLink.removeClass("active");
-            }
-        });
-    } 
+    // function onScroll(event){
+    //     var scrollPosition = $(document).scrollTop();
+    //     $('.menu a').each(function () {
+    //         var currentLink = $(this);
+    //         var refElement = $(currentLink.attr("href"));
+    //         if (refElement.position().top <= scrollPosition && refElement.position().top + refElement.height() > scrollPosition) {
+    //             $('.menu li a').removeClass("active");
+    //             currentLink.addClass("active");
+    //         }
+    //         else{
+    //             currentLink.removeClass("active");
+    //         }
+    //     });
+    // } 
 }());
