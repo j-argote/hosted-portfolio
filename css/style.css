@@ -161,7 +161,7 @@ hr{
 .carousel .item  .banner-img{
 	height:100%;
 	background-repeat: no-repeat !important;
-	background-position:top center !important;
+	background-position: center top !important;
 	background-size:cover !important; 
 	transform: scaleX(-1);	
 }
@@ -215,6 +215,11 @@ hr{
 .typed-cursor {
     font-weight: 300;
 }
+
+.sec-pad {
+	padding: 80px 0px;
+}
+
 .scroll-downs {
   position: absolute;
   right: 0;
@@ -538,43 +543,23 @@ section .section-heading{
 	display: flex;
 	justify-content: center;
 }
-.portfolio .filters-menu{
-	margin-bottom: 40px;
-	text-align: center;;
-}
-.portfolio .filters-menu li{
-	display: inline-block;
-	cursor: pointer;
-}
-.portfolio .filters-menu li{
-	font-size: 13px;
-	position: relative;
-	color: #b7b7b7;
-	font-weight: 400;
-	padding:0 7px;
-	margin-right: auto;
-	margin-left: auto;
-}
-.portfolio .filters-menu li.active{
-	color: #000;
-}
-.portfolio .filters-menu li:hover{
-	color: #000;
-}
 
 .portfolio-single-item{
 	padding-left: 0px;
-	padding-right: 0px;
+	padding-right: 20px;
+	padding-bottom: 20px;
 }
 
 .portfolio .portfolio-wrapper .portfolio-item{
 	float: left;
 	/* original 30% */
+	max-height: 100%;
 	width:100%;
 }
 
 .portfolio .portfolio-wrapper .portfolio-item img{
 	width: 100%;
+	height: auto;
 	transition: all 1s;
 }
 .portfolio .portfolio-wrapper .portfolio-item .portfolio-hover:hover img{
@@ -808,6 +793,13 @@ section .section-heading{
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px) {
+	.carousel .item  .banner-img{
+		height:100%;
+		background-repeat: no-repeat !important;
+		background-position: 25% 40% !important;
+		background-size:cover !important; 
+		transform: scaleX(-1);	
+	}
 	body{
 		font-size: 13px;
 	}
@@ -819,7 +811,7 @@ section .section-heading{
 		margin-bottom: 50px;
 	}
 	.sec-pad {
-	    padding: 70px 0px;
+	    padding: 80px 0px;
 	}
 	.timeline-left{
 		text-align: left;
@@ -863,11 +855,23 @@ section .section-heading{
 		/* original 50% */
 		width: 100%;
 	}
+	.portfolio-single-item{
+		padding-left: 0px;
+		padding-right: 0px;
+		padding-bottom: 450px;
+	}
 
 }
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 767px) {
+	.carousel .item  .banner-img{
+		height:100%;
+		background-repeat: no-repeat !important;
+		background-position: 25% 40% !important;
+		background-size:cover !important; 
+		transform: scaleX(-1);	
+	}
 	.container {
 	    padding-left: 30px;
 	    padding-right: 30px;
@@ -925,6 +929,13 @@ section .section-heading{
 
 /* Extra Small Devices, Phones */ 
 @media only screen and (max-width : 480px) {
+	.carousel .item  .banner-img{
+		height:100%;
+		background-repeat: no-repeat !important;
+		background-position: 25% 40% !important;
+		background-size:cover !important; 
+		transform: scaleX(-1);	
+	}
 	.container{
 		padding-left: 35px;
 		padding-right: 35px;
@@ -948,6 +959,11 @@ section .section-heading{
 		width: 100%;
 		height: 100%;
 }
+.portfolio-single-item{
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-bottom: 420px;
+}
 
 }
 
@@ -955,5 +971,10 @@ section .section-heading{
 @media only screen and (max-width : 360px) {
 	.portfolio .portfolio-wrapper .portfolio-item {
 		width: 100%;
+	}
+	.portfolio-single-item{
+		padding-left: 0px;
+		padding-right: 0px;
+		padding-bottom: 300px;
 	}
 }
